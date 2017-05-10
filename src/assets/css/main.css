@@ -696,6 +696,12 @@ h2 {
     padding-left: 38px;
 }
 
+.factors-bl .factors-bl__item:nth-of-type(5),
+.factors-bl .factors-bl__item:nth-of-type(6),
+.factors-bl .factors-bl__item:nth-of-type(7) {
+    width: 48%;
+}
+
 .factors-bl .factors-bl__item:nth-of-type(-n + 4) {
     padding-left: 76px;
 }
