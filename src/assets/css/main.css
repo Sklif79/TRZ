@@ -116,18 +116,38 @@ h2 {
     margin-bottom: 20px;
     background-color: #fafafa;
     position: relative;
+    font-family: OpenSansRegular, sans-serif;
+    font-size: 0.875rem;
 }
 
-.form__input::-webkit-input-placeholder { /* WebKit browsers */
+.textarea {
+    width: 100%;
+    height: 166px;
+    border: 1px solid #e6e6e6;
+    line-height: 43px;
+    background-color: #fafafa;
+    display: block;
+    resize: none;
+    font-family: OpenSansRegular, sans-serif;
+    font-size: 0.875rem;
+    padding: 1px 17px;
+    margin-bottom: 29px;
+}
+
+.form__input::-webkit-input-placeholder,
+.textarea::-webkit-input-placeholder {
     color: #404040;
 }
-.form__input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+.form__input:-moz-placeholder,
+.textarea:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
     color: #404040;
 }
-.form__input::-moz-placeholder { /* Mozilla Firefox 19+ */
+.form__input::-moz-placeholder,
+.textarea::-moz-placeholder{ /* Mozilla Firefox 19+ */
     color: #404040;
 }
-.form__input:-ms-input-placeholder { /* Internet Explorer 10+ */
+.form__input:-ms-input-placeholder,
+.textarea:-ms-input-placeholder{ /* Internet Explorer 10+ */
     color: #404040;
 }
 
@@ -285,6 +305,7 @@ h2 {
     margin-top: 41px;
     padding: 0 30px;
     font-size: 1rem;
+    transition: 0.2s;
 }
 
 .advice__btn-calc:hover {
@@ -393,13 +414,14 @@ h2 {
     line-height: 45px;
     text-transform: uppercase;
     margin-top: 22px;
+    transition: 0.2s;
 }
 
 .advice-form .form-submit {
     margin-top: 0;
 }
 
-.form-submit:hover {
+.form-submit:hover, .order-master:hover, .factors-questions__btn:hover {
     box-shadow: 0 0 30px rgba(255, 228, 0, .3);
     cursor: pointer;
 }
@@ -762,6 +784,8 @@ h2 {
     font-family: OpenSansBold, sans-serif;
     padding: 0 20px;
     height: 45px;
+    border-radius: 5px;
+    transition: 0.2s;
 }
 
 .factors-transition {
@@ -1087,6 +1111,12 @@ h2 {
     line-height: 53px;
     padding: 0 52px;
     font-size: 1.25rem;
+    transition: 0.2s;
+}
+
+.discount__btn:hover {
+    background-color: #000;
+    color: #ffe400;
 }
 
 /************************* about *************************/
@@ -1126,7 +1156,6 @@ h2 {
 }
 
 .footer a {
-    /*padding: 30px 0;*/
     color: #07C;
     font-size: 13px;
     font-family: Arial, sans-serif;
@@ -1244,9 +1273,10 @@ h2 {
 
 .popup-calculate {
     width: 945px;
+    display: none;
 }
 
-.popup .form {
+.popup .form, .popup-calculate .form {
     border-radius: 5px;
 }
 
@@ -1255,7 +1285,8 @@ label {
 }
 
 .label {
-    padding-left: 14px;
+    padding-left: 23px;
+    margin-right: 18px;
 }
 
 input[type='radio'] {
@@ -1274,7 +1305,7 @@ input[type='radio'] {
     height: 10px;
     border-radius: 50%;
     border: 2px solid #ffc600;
-    top: 0;
+    top: 3px;
     left: 0;
 }
 
@@ -1285,8 +1316,8 @@ input[type='radio'] {
     height: 6px;
     border-radius: 50%;
     background-color: #ffc600;
-    top: 5px;
-    left: 7px;
+    top: 7px;
+    left: 4px;
     display: none;
 }
 
@@ -1296,6 +1327,11 @@ input[type='radio']:checked + .radio-custom::after {
 
 .required {
     position: relative;
+    display: inline-block;
+}
+
+.popup-calculate .form__input {
+    width: 285px;
 }
 
 .required::after {
@@ -1304,4 +1340,71 @@ input[type='radio']:checked + .radio-custom::after {
     color: #000;
     top: 5px;
     right: 5px;
+}
+
+.input-group__title {
+    font-size: 0.8125rem;
+    font-family: OpenSansBold, sans-serif;
+    color: #b2b2b2;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.input-group-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.access {
+    margin-top: 25px;
+}
+
+.wiring {
+    margin-top: 43px;
+    margin-bottom: 15px;
+}
+
+.access__title, .wiring__title {
+    margin-bottom: 10px;
+    max-width:795px;
+    line-height: 18px;
+}
+
+.contact-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-wrap .form__input {
+    width: 440px;
+}
+
+.popup-calculate .form-submit {
+    max-width: 343px;
+}
+
+.submit-wrap {
+    text-align: center;
+    margin-top: -46px;
+}
+
+.popup-calculate .form__title {
+    margin-bottom: 23px;
+}
+
+.input-group{
+    margin-bottom: 28px;
+}
+
+.input-group.location {
+    margin-bottom: 9px;
+}
+
+.input-group.info .form__input {
+    margin-bottom: 13px;
+}
+
+.depth .form__input {
+    margin-bottom: 12px;
 }

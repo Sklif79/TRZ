@@ -132,7 +132,7 @@
                 системы из бетонных колец
             </div>
             <div class="product-wrap-info__btn-wrap">
-                <a href="" class="product-wrap-info__btn">
+                <a href="#consultation" class="product-wrap-info__btn modalbox">
                     Получить консультацию и расчет стоимости
                 </a>
             </div>
@@ -173,7 +173,7 @@
                 Накопительные ёмкости
             </div>
             <div class="product-wrap-info__btn-wrap">
-                <a href="" class="product-wrap-info__btn">
+                <a href="#consultation" class="product-wrap-info__btn modalbox">
                     Получить консультацию и расчет стоимости
                 </a>
             </div>
@@ -215,7 +215,7 @@
                 Септики
             </div>
             <div class="product-wrap-info__btn-wrap">
-                <a href="" class="product-wrap-info__btn">
+                <a href="#consultation" class="product-wrap-info__btn modalbox">
                     Получить консультацию и расчет стоимости
                 </a>
             </div>
@@ -263,7 +263,7 @@
                 биологической очистки
             </div>
             <div class="product-wrap-info__btn-wrap">
-                <a href="" class="product-wrap-info__btn">
+                <a href="#consultation" class="product-wrap-info__btn modalbox">
                     Получить консультацию и расчет стоимости
                 </a>
             </div>
@@ -692,7 +692,7 @@
             </li>
             <li class="kt-btn">
                 <!--Akavita counter start-->
-                <script type="text/javascript">
+                <script async type="text/javascript">
                     var AC_ID = 63047;
                     var AC_TR = false;
                     (function () {
@@ -769,36 +769,41 @@
     <form action="" method="post" name="" class="form">
         <div class="form__title">Рассчитать стоимость</div>
 
-        <div class="input-group">
+        <div class="input-group location">
             <div class="input-group__title">Месторасположение</div>
-            <div class="required">
-                <input type="text" placeholder="Название населенного пункта..." class="form__input"
-                       data-validation="required">
+            <div class="input-group-wrap">
+                <div class="required">
+                    <input type="text" placeholder="Название населенного пункта..." class="form__input"
+                           data-validation="required">
+                </div>
+                <input type="text" placeholder="Направление выезда из Минска..." class="form__input">
+                <input type="text" placeholder="Расстояние от МКАД..." class="form__input">
             </div>
-            <input type="text" placeholder="Направление выезда из Минска..." class="form__input">
-            <input type="text" placeholder="Расстояние от МКАД..." class="form__input">
         </div>
 
-        <div class="input-group">
+        <div class="input-group info">
             <div class="input-group__title">Информация оБ участке</div>
-            <div class="required">
-                <input type="text" placeholder="Тип постройки и степень готовности..." class="form__input"
-                       data-validation="required">
-            </div>
-            <div class="required">
-                <input type="text" placeholder="Проживающих человек..." class="form__input"
-                       data-validation="required">
-            </div>
-            <div class="required">
-                <input type="text" placeholder="Тип грунта..." class="form__input" data-validation="required">
-            </div>
-            <div class="required">
-                <input type="text" placeholder="Уровень глубины грунтовых вод..." class="form__input" data-validation="required">
+            <div class="input-group-wrap">
+                <div class="required">
+                    <input type="text" placeholder="Тип постройки и степень готовности..." class="form__input"
+                           data-validation="required">
+                </div>
+                <div class="required">
+                    <input type="text" placeholder="Проживающих человек..." class="form__input"
+                           data-validation="required">
+                </div>
+                <div class="required">
+                    <input type="text" placeholder="Тип грунта..." class="form__input" data-validation="required">
+                </div>
+                <div class="required">
+                    <input type="text" placeholder="Уровень глубины грунтовых вод..." class="form__input"
+                           data-validation="required">
+                </div>
             </div>
         </div>
 
         <div class="access">
-            <div>
+            <div class="access__title">
                 Есть ли доступ к водоснабжению на участке или в радиусе 100 м от него:
             </div>
             <label>
@@ -814,7 +819,7 @@
         </div>
 
         <div class="wiring">
-            <div>
+            <div class="wiring__title">
                 Выполнена ли внутренняя разводка канализации (если да, указать на какой ТОЧНО глубине от поверхности
                 земли
                 выведена из дома труба):
@@ -831,26 +836,31 @@
             </label>
         </div>
 
-        <div class="required">
+        <div class="required depth">
             <input type="text" placeholder="Глубина вывода трубы из дома..." class="form__input"
                    data-validation="required">
         </div>
 
-        <textarea placeholder="Прочие сведения..."></textarea>
+        <textarea placeholder="Прочие сведения..." class="textarea"></textarea>
 
         <div class="input-group">
-            <div class="input-group__title"></div>
-
-            <div class="required">
-                <input type="text" placeholder="Ваше имя..." class="form__input" data-validation="required">
+            <div class="input-group__title">
+                Контактные данные
             </div>
-            <div class="required">
-                <input type="text" placeholder="Ваш номер телефона и(или) электронная почта..." class="form__input"
-                       data-validation="required">
+            <div class="contact-wrap">
+                <div class="required">
+                    <input type="text" placeholder="Ваше имя..." class="form__input" data-validation="required">
+                </div>
+                <div class="required">
+                    <input type="text" placeholder="Ваш номер телефона и(или) электронная почта..." class="form__input"
+                           data-validation="required">
+                </div>
             </div>
         </div>
 
-        <button type="submit" class="form-submit theme_yellow">Рассчитать стоимость</button>
+        <div class="submit-wrap">
+            <button type="submit" class="form-submit theme_yellow">Рассчитать стоимость</button>
+        </div>
     </form>
 </div>
 
@@ -858,6 +868,6 @@
 <script src="assets/js/libs.js"></script>
 <script src="assets/js/main.js"></script>
 
-<script src="//yastatic.net/share/share.js" charset="utf-8"></script>
+<script async src="//yastatic.net/share/share.js" charset="utf-8"></script>
 </body>
 </html>
